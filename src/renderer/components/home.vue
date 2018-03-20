@@ -115,7 +115,6 @@
 <script>
   import fs from 'fs'
   import baiduApi from 'baidu-aip-sdk'
-
   let AipOcrClient = baiduApi.ocr
 
   export default {
@@ -137,7 +136,7 @@
           let image = fs.readFileSync(file.path).toString("base64")
           this.fileMsg = '正在解析发票...'
           let stream = fs.createReadStream(file.path);
-          console.log(image)
+
           let client = new AipOcrClient(10873910, 'MEmamWlWBsfOI9qENpdczxTw', 'H3skvIYrTm9t1V8Rxhc767sy5a1Qw8BB')
           // 调用通用票据识别
           let options = {};
